@@ -1,6 +1,6 @@
 import random
 guracoinprice = 100 # Sets the price for gura
-money = 100 # User money
+money = 1000 # User money
 guracoininventory = 0 # The amount the player has
 turns = 0 #Which day it is, late id like to change this so theres a morning night cycle
 startingturns = 21 #Decided with 21 to do a 7 day week in the future I want to have a Morning Afternoon Night phase. For Morning
@@ -26,14 +26,14 @@ while turns < startingturns:
                     purchaseamount = int(input("Please put a number for how much you'd like to purchase.\n")) #This converts the string into a int
                 except ValueError:      
                     print("Please enter a valid number.\n") # and if it cant turn it into a int it gives the above valueerror and throws the user a fuck you
-                if guracoinprice*purchaseamount < money:
+                if guracoinprice*purchaseamount <= money:
                     guracoininventory += purchaseamount
                     money -= guracoinprice*purchaseamount
                     turns += 1
                     turnend = 1
-            else:
-                ("Print you don't have enough for that purchase.\n")
-    if selection =='2':
+                else:
+                    print("You don't have enough for that purchase.\n")
+    elif selection =='2':
         if guracoininventory < 0:
             print("You don't have enough coins for this transaction.\n")
         else:
@@ -48,7 +48,7 @@ while turns < startingturns:
                     turns += 1
                     turnend = 1
             else:
-                ("Print you don't have enough for that purchase.\n")
+                print("You don't have enough for that purchase.\n")
     elif selection == '3':
         print("You waited one turn.\n")
         turns += 1
