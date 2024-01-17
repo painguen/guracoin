@@ -39,7 +39,7 @@ while turns < startingturns:
         else:
             while sellamount is None: 
                 try:
-                    sellamount = int(input("Please put a number for how much you'd like to purchase.\n"))
+                    sellamount = int(input("Please put a number for how much you'd like to sell.\n"))
                 except ValueError:      
                     print("Please enter a valid number.\n")
                 if guracoininventory*sellamount > 0:
@@ -48,7 +48,7 @@ while turns < startingturns:
                     turns += 1
                     turnend = 1
             else:
-                print("You don't have enough for that purchase.\n")
+                print("You don't have enough for that sell.\n")
     elif selection == '3':
         print("You waited one turn.\n")
         turns += 1
