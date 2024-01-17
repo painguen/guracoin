@@ -1,6 +1,6 @@
 import random
 guracoinprice = 100 # Sets the price for gura
-money = 1000 # User money
+money = 100 # User money
 guracoininventory = 0 # The amount the player has
 turns = 0 #Which day it is, late id like to change this so theres a morning night cycle
 startingturns = 21 #Decided with 21 to do a 7 day week in the future I want to have a Morning Afternoon Night phase. For Morning
